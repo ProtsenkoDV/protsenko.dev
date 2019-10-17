@@ -1,0 +1,67 @@
+---
+layout: post
+status: publish
+published: true
+title: Реверс Find The Easy Pass
+author:
+  display_name: admin
+  login: admin
+  email: protsenko@protonmail.com
+  url: ''
+author_login: admin
+author_email: protsenko@protonmail.com
+wordpress_id: 149
+wordpress_url: http://protsenko.dev/?p=149
+date: '2019-03-15 15:39:37 +0500'
+date_gmt: '2019-03-15 12:39:37 +0500'
+categories:
+- Информационная безопасность
+- Reverse
+tags: []
+comments: []
+---
+<p><!-- wp:paragraph --></p>
+<p>Привет!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В данной статье хочу разобрать простейшее задание по реверсу от сайта HackTheBox, файл для реверса можете скачать с htb после регистрации. Сообщение об ошибке содержит "Wrong Password"</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:more --><br />
+<!--more--><br />
+<!-- /wp:more --></p>
+<p><!-- wp:paragraph --></p>
+<p>Загружаем файл в анализатор исполняемых файлов, у меня это PEID, видим что используется Delphi.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":150,"align":"center"} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://protsenko.dev/wp-content/uploads/2019/03/Screenshot_10.png" alt="" class="wp-image-150"/></figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ничего особенного, загружаем в отладчик у меня это x32dbg, перехожу на вкладку ссылки, и ввожу сообщение об ошибке, переходим по адресу</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":152} --></p>
+<figure class="wp-block-image"><img src="https://protsenko.dev/wp-content/uploads/2019/03/Screenshot_14-1024x578.png" alt="" class="wp-image-152"/></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Видим что данное сообщение вызывает при сравнении регистров, на сравнение поставим точку остановы. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":153} --></p>
+<figure class="wp-block-image"><img src="https://protsenko.dev/wp-content/uploads/2019/03/Screenshot_15-1024x579.png" alt="" class="wp-image-153"/></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Запустим приложение из под отладчика, введем неверный пароль и остановимся на моменте сравнения. В окне сравнения увидим правильный пароль: fortran!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":154,"align":"center"} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://protsenko.dev/wp-content/uploads/2019/03/1.png" alt="" class="wp-image-154"/></figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":155,"align":"center"} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://protsenko.dev/wp-content/uploads/2019/03/Screenshot_17.png" alt="" class="wp-image-155"/></figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Как видим, довольно легкое задание, спасибо за внимание.<br></p>
+<p><!-- /wp:paragraph --></p>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Миграция (Переезд) с Drupal на Blogger | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Миграция (Переезд) с Drupal на Blogger" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Наверняка некоторые блоггеры задумывались о переезде с платного хостинга, на бесплатную блог платформу, но не решались из-за лени, недостатка времени, либо чего нибудь еще.В данной статье я опишу свой опыт &quot;миграции&quot; с Drupal на Blogger.&lt;/p&gt; Что же меня побудило &quot;мигрировать&quot; с Drupal на Blogger?Необходимость ежемесячно оплачивать платный хостинг - главная причина моего переезда. Мой блог был давно заброшен, я туда ничего не постил, да и не зарабатывал на нем. Почти целый год сайт был недоступен. Зачем мне оплачивать полностью хостинг, если можно воспользоваться хорошей бесплатной платформой? Русско-язычных статей я не нашел, и пришлось покуривать англоязычные мануалы. Как оказалось пеерезд с Drupal на Blogger довольно тяжек.Все написанные скрипты для экспорта БД Drupal в xml файл Blogger&#39;a - давно устарели.&nbsp; При импорте готового xml файла - импорт останавливался на пункте : &quot;Начинаем писать сообщения&quot;. Жди хоть пол года, а база не импортируется. К данному делу я подошел творчески, но довольно таки объемным путем.Я произвел &quot;миграцию&quot; с Drupal на WordPress, а потом уже на Blogger. Этап первый (Миграция на WordPress)Так как у меня оставался полный бэкап сайта с базой данных sql , я развернул его на локальном сервере Apache.Так же для работы мне потребовалось развернуть движок WordPress.О том как установить WP можно подробно прочесть в Google. На русско - язычных просторах я нашел специальный скрипт для перехода с Drupal на WP.Скачать его можно тут:&nbsp;Google DriveРаспаковываем архив с скриптами, и открываем Drupal2Wordpress.php для редактирования. Указываем данные для подключения к вашим базам данных.Заливаем на сервер, и запускаем скрипт. Скорость работы скрипта зависит от вашей базы данных.По завершению скрипт вас уведомит о проделанной работе. Этап второй (Миграция с WordPress на Blogger)Заходим в администраторскую панель WP.Выбираем Инструменты -&gt; Экспорт.Выбираем материалы для экспорта, и нажимаем&nbsp;Скачать файл экспортаНа выходе получаем *.XML файл.Далее нам нужно его преобразовать в файл читаемый Blogger&#39;омДля этого существует специальный сервис:&nbsp;кликаемЗаливаем наш файл, и на выходе получаем новый.Этап третий (Импорт в Blogger)Создаем, или заходим в настройки уже созданного блога.Переходим в подпункт &quot;Другое&quot;Нажимаем кнопку экспорт, указываем последний полученный файл, вводим капчу, и нажимаем на кнопку Экспорт. Ждем завершения работы, и вуаля, все данные перенесены! :) &lt;/div&gt;" />
+<meta property="og:description" content="Наверняка некоторые блоггеры задумывались о переезде с платного хостинга, на бесплатную блог платформу, но не решались из-за лени, недостатка времени, либо чего нибудь еще.В данной статье я опишу свой опыт &quot;миграции&quot; с Drupal на Blogger.&lt;/p&gt; Что же меня побудило &quot;мигрировать&quot; с Drupal на Blogger?Необходимость ежемесячно оплачивать платный хостинг - главная причина моего переезда. Мой блог был давно заброшен, я туда ничего не постил, да и не зарабатывал на нем. Почти целый год сайт был недоступен. Зачем мне оплачивать полностью хостинг, если можно воспользоваться хорошей бесплатной платформой? Русско-язычных статей я не нашел, и пришлось покуривать англоязычные мануалы. Как оказалось пеерезд с Drupal на Blogger довольно тяжек.Все написанные скрипты для экспорта БД Drupal в xml файл Blogger&#39;a - давно устарели.&nbsp; При импорте готового xml файла - импорт останавливался на пункте : &quot;Начинаем писать сообщения&quot;. Жди хоть пол года, а база не импортируется. К данному делу я подошел творчески, но довольно таки объемным путем.Я произвел &quot;миграцию&quot; с Drupal на WordPress, а потом уже на Blogger. Этап первый (Миграция на WordPress)Так как у меня оставался полный бэкап сайта с базой данных sql , я развернул его на локальном сервере Apache.Так же для работы мне потребовалось развернуть движок WordPress.О том как установить WP можно подробно прочесть в Google. На русско - язычных просторах я нашел специальный скрипт для перехода с Drupal на WP.Скачать его можно тут:&nbsp;Google DriveРаспаковываем архив с скриптами, и открываем Drupal2Wordpress.php для редактирования. Указываем данные для подключения к вашим базам данных.Заливаем на сервер, и запускаем скрипт. Скорость работы скрипта зависит от вашей базы данных.По завершению скрипт вас уведомит о проделанной работе. Этап второй (Миграция с WordPress на Blogger)Заходим в администраторскую панель WP.Выбираем Инструменты -&gt; Экспорт.Выбираем материалы для экспорта, и нажимаем&nbsp;Скачать файл экспортаНа выходе получаем *.XML файл.Далее нам нужно его преобразовать в файл читаемый Blogger&#39;омДля этого существует специальный сервис:&nbsp;кликаемЗаливаем наш файл, и на выходе получаем новый.Этап третий (Импорт в Blogger)Создаем, или заходим в настройки уже созданного блога.Переходим в подпункт &quot;Другое&quot;Нажимаем кнопку экспорт, указываем последний полученный файл, вводим капчу, и нажимаем на кнопку Экспорт. Ждем завершения работы, и вуаля, все данные перенесены! :) &lt;/div&gt;" />
+<link rel="canonical" href="http://localhost:4000/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/2014/02/05/d0-bc-d0-b8-d0-b3-d1-80-d0-b0-d1-86-d0-b8-d1-8f-d0-bf-d0-b5-d1-80-d0-b5-d0-b5-d0-b7-d0-b4-d1-81-drupal-d0-bd-d0-b0-blogger.html" />
+<meta property="og:url" content="http://localhost:4000/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/2014/02/05/d0-bc-d0-b8-d0-b3-d1-80-d0-b0-d1-86-d0-b8-d1-8f-d0-bf-d0-b5-d1-80-d0-b5-d0-b5-d0-b7-d0-b4-d1-81-drupal-d0-bd-d0-b0-blogger.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-02-05T10:07:00+06:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/2014/02/05/d0-bc-d0-b8-d0-b3-d1-80-d0-b0-d1-86-d0-b8-d1-8f-d0-bf-d0-b5-d1-80-d0-b5-d0-b5-d0-b7-d0-b4-d1-81-drupal-d0-bd-d0-b0-blogger.html"},"@type":"BlogPosting","url":"http://localhost:4000/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/2014/02/05/d0-bc-d0-b8-d0-b3-d1-80-d0-b0-d1-86-d0-b8-d1-8f-d0-bf-d0-b5-d1-80-d0-b5-d0-b5-d0-b7-d0-b4-d1-81-drupal-d0-bd-d0-b0-blogger.html","headline":"Миграция (Переезд) с Drupal на Blogger","dateModified":"2014-02-05T10:07:00+06:00","datePublished":"2014-02-05T10:07:00+06:00","description":"Наверняка некоторые блоггеры задумывались о переезде с платного хостинга, на бесплатную блог платформу, но не решались из-за лени, недостатка времени, либо чего нибудь еще.В данной статье я опишу свой опыт &quot;миграции&quot; с Drupal на Blogger.&lt;/p&gt; Что же меня побудило &quot;мигрировать&quot; с Drupal на Blogger?Необходимость ежемесячно оплачивать платный хостинг - главная причина моего переезда. Мой блог был давно заброшен, я туда ничего не постил, да и не зарабатывал на нем. Почти целый год сайт был недоступен. Зачем мне оплачивать полностью хостинг, если можно воспользоваться хорошей бесплатной платформой? Русско-язычных статей я не нашел, и пришлось покуривать англоязычные мануалы. Как оказалось пеерезд с Drupal на Blogger довольно тяжек.Все написанные скрипты для экспорта БД Drupal в xml файл Blogger&#39;a - давно устарели.&nbsp; При импорте готового xml файла - импорт останавливался на пункте : &quot;Начинаем писать сообщения&quot;. Жди хоть пол года, а база не импортируется. К данному делу я подошел творчески, но довольно таки объемным путем.Я произвел &quot;миграцию&quot; с Drupal на WordPress, а потом уже на Blogger. Этап первый (Миграция на WordPress)Так как у меня оставался полный бэкап сайта с базой данных sql , я развернул его на локальном сервере Apache.Так же для работы мне потребовалось развернуть движок WordPress.О том как установить WP можно подробно прочесть в Google. На русско - язычных просторах я нашел специальный скрипт для перехода с Drupal на WP.Скачать его можно тут:&nbsp;Google DriveРаспаковываем архив с скриптами, и открываем Drupal2Wordpress.php для редактирования. Указываем данные для подключения к вашим базам данных.Заливаем на сервер, и запускаем скрипт. Скорость работы скрипта зависит от вашей базы данных.По завершению скрипт вас уведомит о проделанной работе. Этап второй (Миграция с WordPress на Blogger)Заходим в администраторскую панель WP.Выбираем Инструменты -&gt; Экспорт.Выбираем материалы для экспорта, и нажимаем&nbsp;Скачать файл экспортаНа выходе получаем *.XML файл.Далее нам нужно его преобразовать в файл читаемый Blogger&#39;омДля этого существует специальный сервис:&nbsp;кликаемЗаливаем наш файл, и на выходе получаем новый.Этап третий (Импорт в Blogger)Создаем, или заходим в настройки уже созданного блога.Переходим в подпункт &quot;Другое&quot;Нажимаем кнопку экспорт, указываем последний полученный файл, вводим капчу, и нажимаем на кнопку Экспорт. Ждем завершения работы, и вуаля, все данные перенесены! :) &lt;/div&gt;","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">О авторе сайта</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Миграция (Переезд) с Drupal на Blogger</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-02-05T10:07:00+06:00" itemprop="datePublished">Feb 5, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{"display_name"=>"Dima Protsenko", "login"=>"Dima Protsenko", "email"=>"", "url"=>""}</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div dir="ltr" style="text-align: left;">Наверняка некоторые блоггеры задумывались о переезде с платного хостинга, на бесплатную блог платформу, но не решались из-за лени, недостатка времени, либо чего нибудь еще.<br />В данной статье я опишу свой опыт "миграции" с Drupal на Blogger.</p>
+<p><a name='more'></a></p>
+<p>Что же меня побудило "мигрировать" с Drupal на Blogger?<br />Необходимость ежемесячно оплачивать платный хостинг - главная причина моего переезда. Мой блог был давно заброшен, я туда ничего не постил, да и не зарабатывал на нем. Почти целый год сайт был недоступен. Зачем мне оплачивать полностью хостинг, если можно воспользоваться хорошей бесплатной платформой?</p>
+<p>Русско-язычных статей я не нашел, и пришлось покуривать англоязычные мануалы. Как оказалось пеерезд с Drupal на Blogger довольно тяжек.<br />Все написанные скрипты для экспорта БД Drupal в xml файл Blogger'a - давно устарели.&nbsp; При импорте готового xml файла - импорт останавливался на пункте : "Начинаем писать сообщения". Жди хоть пол года, а база не импортируется.</p>
+<p>К данному делу я подошел творчески, но довольно таки объемным путем.<br />Я произвел "миграцию" с Drupal на WordPress, а потом уже на Blogger.</p>
+<p><b>Этап первый (Миграция на WordPress)</b><br />Так как у меня оставался полный бэкап сайта с базой данных sql , я развернул его на локальном сервере Apache.<br />Так же для работы мне потребовалось развернуть движок WordPress.<br />О том как установить WP можно подробно прочесть в Google.</p>
+<p>На русско - язычных просторах я нашел специальный скрипт для перехода с Drupal на WP.<br />Скачать его можно тут:&nbsp;<a href="https://drive.google.com/file/d/0B3H0Y8aAWbaqZWxwSGVib1RfTVk/edit?usp=sharing">Google Drive</a><br />Распаковываем архив с скриптами, и открываем Drupal2Wordpress.php для редактирования. Указываем данные для подключения к вашим базам данных.<br />Заливаем на сервер, и запускаем скрипт. Скорость работы скрипта зависит от вашей базы данных.<br />По завершению скрипт вас уведомит о проделанной работе.</p>
+<p><b>Этап второй (Миграция с WordPress на Blogger)</b><br />Заходим в администраторскую панель WP.<br />Выбираем Инструменты -&gt; Экспорт.<br />Выбираем материалы для экспорта, и нажимаем&nbsp;<b>Скачать файл экспорта</b><br />На выходе получаем *.XML файл.<br />Далее нам нужно его преобразовать в файл читаемый Blogger'ом<br />Для этого существует специальный сервис:&nbsp;<a href="http://google.about.com/gi/o.htm?zi=1/XJ&amp;zTi=1&amp;sdn=google&amp;cdn=compute&amp;tm=35&amp;f=00&amp;su=p284.13.342.ip_p504.6.342.ip_&amp;tt=2&amp;bt=1&amp;bts=1&amp;zu=http%3A//wordpress2blogger.appspot.com/" rel="nofollow">кликаем</a><br />Заливаем наш файл, и на выходе получаем новый.<br /><b><br /></b><b>Этап третий (Импорт в Blogger)</b><br />Создаем, или заходим в настройки уже созданного блога.<br />Переходим в подпункт "Другое"<br />Нажимаем кнопку экспорт, указываем последний полученный файл, вводим капчу, и нажимаем на кнопку Экспорт.</p>
+<div></div>
+<p>
+<div style="-webkit-text-stroke-width: 0px; color: black; font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; margin: 0px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px;">Ждем завершения работы, и вуаля, все данные перенесены! :)</div>
+</div>
+
+  </div><a class="u-url" href="/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%BE%D0%B5%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/2014/02/05/d0-bc-d0-b8-d0-b3-d1-80-d0-b0-d1-86-d0-b8-d1-8f-d0-bf-d0-b5-d1-80-d0-b5-d0-b5-d0-b7-d0-b4-d1-81-drupal-d0-bd-d0-b0-blogger.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

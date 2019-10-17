@@ -1,0 +1,43 @@
+---
+layout: post
+status: publish
+published: true
+title: 1С Предприятие 8.3. Изменяем форму справочника, и переносим ее на внешнюю обработку
+  с выводом доп. столбца
+author:
+  display_name: Dima Protsenko
+  login: Dima Protsenko
+  email: ''
+  url: ''
+author_login: Dima Protsenko
+wordpress_id: 17
+date: '2017-10-16 10:16:00 +0500'
+date_gmt: '2017-10-16 07:16:00 +0500'
+categories:
+- 1С Разработка
+- ЗУП 3.1
+tags: []
+comments: []
+---
+<div dir="ltr" style="text-align: left;">
+<p>Добрый день, сегодня хочу описать пошагово как можно изменить форму списка справочника, и вывести на нее дополнительный столбец с выводом значения из регистра сведений.<br />
+Задача с уровнем сложности <u>легко, </u>первым делом заходим в конфигуратор.<br />
+За основу возьмем справочник "Виды работ сотрудников"</p>
+<p><a name="more"></a><br />
+Создаем в конфигураторе внешнюю обработку без реквизитов, и к ней форму.<br />
+Реквизиты будем создавать на форме, создаем реквизит с наименованием "Виды работ сотрудников", тип выбираем Динамический список.<br />
+Должно получится вот-так:</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_2.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_2-300x60.png" width="640" height="126" border="0" data-original-height="160" data-original-width="801" /></a></div>
+<p>Далее в свойстве данного реквизита выбираем Основную таблицу, ею будет справочник который мы взяли за основу.<br />
+И внимание, выбрав данную таблицу в реквизиты формы упали реквизиты справочника, но мы ведь не останавливаемся, и идем дальше, нам нужно получить еще данные из регистра сведений и вывести их на форму, для этого нажимаем на галочку выше: Произвольный запрос.<br />
+Важно сначала выбрать основную таблицу, а потом произвольный запрос, так система поймет что взять за основу.<br />
+Нажимаем на настройку списка, и переходим к конструктору запроса.</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_4.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_4-300x206.png" width="400" height="273" border="0" data-original-height="585" data-original-width="854" /></a></div>
+<p>Добавляем к выводу Реквизит Расценка из Регистра сведений РасценкиРаботСотрудников.СрезПоследних, в связях автоматически добавилась связь, к сожаление не совсем корректная, вместо левого соединения делаем правое.</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_5.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_5-300x54.png" width="400" height="71" border="0" data-original-height="163" data-original-width="910" /></a></div>
+<p>Сохраняем все, и переносим Динамический список на форму, оставляя только необходимые реквизиты</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_6.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_6-300x177.png" width="400" height="235" border="0" data-original-height="392" data-original-width="666" /></a></div>
+<p>Сохраняем обработку как внешнюю, и пробуем.<br />
+Полученный результат ниже</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_7.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_7-300x256.png" width="400" height="341" border="0" data-original-height="573" data-original-width="671" /></a></div>
+</div>

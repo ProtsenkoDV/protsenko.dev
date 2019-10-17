@@ -1,0 +1,72 @@
+---
+layout: post
+status: publish
+published: true
+title: Установка OpenJFX 11 IntelliJ IDEA
+author:
+  display_name: admin
+  login: admin
+  email: protsenko@protonmail.com
+  url: ''
+author_login: admin
+author_email: protsenko@protonmail.com
+wordpress_id: 181
+wordpress_url: https://protsenko.dev/?p=181
+date: '2019-05-25 09:46:16 +0500'
+date_gmt: '2019-05-25 06:46:16 +0500'
+categories:
+- Java
+tags: []
+comments: []
+---
+<p><!-- wp:paragraph --></p>
+<p>В данной статье пойдет речь об установке OpenJFX 11 под IntellIiJ IDEA.  Установка предельно простая если следовать всем пунктам в точном соответствии.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list {"ordered":true} --></p>
+<ol>
+<li>Загружаем OpenJDK с страницы : https://jdk.java.net/</li>
+<li>Далее загружаем OpenJFX с страницы : https://gluonhq.com/products/javafx/ </li>
+<li>Скачиваем и сразу устанавливаем Scene Builder: https://gluonhq.com/products/scene-builder/ </li>
+<li>Распаковываем архивы, для удобства я поместил их на диск C: в папку j11</li>
+<li>В папке j11 - две папки одна с OpenJDK другая с OpenJFX</li>
+<li>В IntelliJ IDEA указываем путь к OpenJDK</li>
+<li>Создаем проект JavaFX</li>
+<li>В Project Structures на вкладке Libraries добавляем загруженный OpenJFX </li>
+<li>В VM Options указываем --module-path C:\j11\openjfx\lib --add-modules=javafx.controls --add-modules=javafx.fxml</li>
+<li>Запускаем созданный проект</li>
+</ol>
+<p><!-- /wp:list --></p>
+<p><!-- wp:image {"id":183,"align":"center","width":692,"height":110} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter is-resized"><img src="https://protsenko.dev/wp-content/uploads/2019/05/Screenshot_1-1024x164.png" alt="" class="wp-image-183" width="692" height="110"/><br />
+<figcaption>File -> New project -> Java FX</figcaption>
+</figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":184,"align":"center","width":680,"height":397} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter is-resized"><img src="https://protsenko.dev/wp-content/uploads/2019/05/Screenshot_2.png" alt="" class="wp-image-184" width="680" height="397"/><br />
+<figcaption>Project SDK -> New -> Папка с OpenJDK</figcaption>
+</figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":182,"align":"center"} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://protsenko.dev/wp-content/uploads/2019/05/Screenshot_3-1024x385.png" alt="" class="wp-image-182"/><br />
+<figcaption>File -> Project structure -> Libraries</figcaption>
+</figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":185,"align":"center"} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://protsenko.dev/wp-content/uploads/2019/05/Screenshot_5-1024x282.png" alt="" class="wp-image-185"/><br />
+<figcaption>Run -> Edit configurations -> VM options</figcaption>
+</figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":187} --></p>
+<figure class="wp-block-image"><img src="https://protsenko.dev/wp-content/uploads/2019/05/Screenshot_7-1024x645.png" alt="" class="wp-image-187"/></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Хочу обратить ваше внимание на то что Scene Builder не очень работает на 4к экранах.</p>
+<p><!-- /wp:paragraph --></p>
