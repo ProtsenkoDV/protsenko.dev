@@ -1,0 +1,55 @@
+---
+layout: post
+status: publish
+published: true
+title: Windows 10 / Server 2008 R2 + VipNet Client / Coordinator = BSOD
+author:
+  display_name: Dima Protsenko
+  login: Dima Protsenko
+  email: ''
+  url: ''
+author_login: Dima Protsenko
+wordpress_id: 31
+wordpress_url: https://protsenko.dev/?p=31
+date: '2016-10-07 09:25:00 +0500'
+date_gmt: '2016-10-07 06:25:00 +0500'
+---
+<div dir="ltr" style="text-align: left;">
+<div style="clear: both; text-align: center;"></div>
+<div style="text-align: center;">
+<div style="text-align: left;">upd 23.01.2019: VipNet так и любит вызывать BSOD'ы на разных ОС Windows, замечен в любви к Windows server 2008 R2.</div>
+<div style="text-align: left;">Было еще случаи:</div>
+<ul style="text-align: left;">
+<li>Однажды Windows Server обновил свои компоненты, и улетел в BSOD посреди ночи.</li>
+<li>Однажды установил Vipnet на необновленный сервер -&nbsp; сервер улетел в астрал.</li>
+<li>Windows 10 умеет также.</li>
+</ul>
+<div style="text-align: left;">Все проблемы с випнетом решаются:</div>
+<ul style="text-align: left;">
+<li>vipnet cleaner'ом</li>
+<li>откатом обновлений ОС</li>
+<li>установкой всех последних обновлений ОС</li>
+<li>удалением vipnet и установкой другой версии</li>
+<li>установкой vipnet csp версии отличной от комплекта поставки</li>
+<li><u>удалением vipnet'а навсегда☺️</u></li>
+</ul>
+<div style="text-align: left;"></div>
+<p>История одной любви.</p>
+</div>
+<div style="text-align: left;">Представляю Вам рецепт для порчи настроения, все элементарно просто, закупаете топовые компьютеры, лицензии на windows 10, настраивайте все очень аккуратно, а потом ставьте VipNet. История 1000 и 1 BSOD'a<br />
+<a name="more"></a></div>
+<div style="text-align: left;"></div>
+<div style="text-align: left;">Повесть о том как не стоит делать производителям ПО, по гос. контракту были закуплены компьютеры в одну из организаций которую я поддерживаю.</div>
+<div style="text-align: left;">Суббота - день чудесный, пришел устанавливать компьютеры, все настроил ОТ и ДО, готовую систему склонировал на еще 5 компьютеров, радость сисадмина, ставить в течении недели по одному системнику, и будет тебе радость, ан-нет!</div>
+<div style="text-align: left;"></div>
+<div style="text-align: left;">Производитель VipNet Client'a думает по другому. Первые тестовые компьютеры были установлены двум пользователям, жаловались на перезагрузки. Просмотр логов показывал BSOD, просмотр minidump'a с помощью Windows Debugging Tools дал чуть больше чем ничего. Дальше пошла переустановка драйверов видео, удаления radmin'a, откат всех драйверов, удаление всех программ, и оп! VipNet Client был удален так же, BSOD не прекратились, в отчаянии запускал стресс-тесты, система падает не понятно из-за чего, и знаете, так рандомно, прям как я люблю! :)</div>
+<div style="text-align: left;"></div>
+<div style="text-align: left;">Самым главным подозреваемым в этой истории был VipNet, было решено стрельнуть из пушки по воробьям, а именно переустановить Windows. Стресс-тест с помощью AIDA64 показал что система держит нагрузку с легкостью, пару суток без выключений. Система голая, драйвера от производителя что шли с материнкой, и видеокартой.</div>
+<div style="text-align: left;"></div>
+<div style="text-align: left;">Шаг первый, компьютер установлен на рабочее место, человек к работе не допущен, работа производится по удаленке, установлена последняя версия VipNet'a <a href="http://infotecs.ru/downloads/product_demo.php?id_product=2870" target="_blank" rel="nofollow noopener noreferrer">!клац!</a>, BSOOOOD BITCH, randomly BSOD, окееей, внимание сайт VipNet'a, говорит что последняя версия их славной программки теперь официально поддерживает Windows 10, ан-нет!</div>
+<div style="text-align: left;"></div>
+<div style="text-align: left;">Решение было куда интереснее, и экстравагантнее, нам нужна версия VipNet'a, которой нет на официальном сайте, круто, не так-ли?</div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-Oj0Paz1dGDw/V_c-xLXWyXI/AAAAAAAACFI/SMCxD5SkrpwdisKzwcTncBRT_Ttp0zFmACLcB/s1600/Screenshot_7.png"><img src="https://4.bp.blogspot.com/-Oj0Paz1dGDw/V_c-xLXWyXI/AAAAAAAACFI/SMCxD5SkrpwdisKzwcTncBRT_Ttp0zFmACLcB/s400/Screenshot_7.png" width="400" height="186" border="0"></a></div>
+<div style="text-align: left;">Нам нужен VipNet Client 3.2.12! Хия, о компьютерный джедай, устал от BSOD'ов на винде 10, подозреваешь VipNet? Качай его с левого сайта <a href="http://mail.ufz-kemerovo.ru/" target="_blank" rel="noopener noreferrer">!клац!</a>, если недоступна ссылка, то <a href="https://drive.google.com/file/d/0B3H0Y8aAWbaqTU1wT0J0RUFUckU/view?usp=sharing" target="_blank" rel="noopener noreferrer">welcome to my mirror</a></p>
+</div>
+</div>

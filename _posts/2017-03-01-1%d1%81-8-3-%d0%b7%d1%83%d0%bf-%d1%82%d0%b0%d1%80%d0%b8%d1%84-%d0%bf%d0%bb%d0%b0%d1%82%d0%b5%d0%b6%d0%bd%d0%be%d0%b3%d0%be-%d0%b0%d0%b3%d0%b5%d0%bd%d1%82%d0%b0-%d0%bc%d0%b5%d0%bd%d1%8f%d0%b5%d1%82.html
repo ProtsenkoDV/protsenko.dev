@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: '1С 8.3 ЗУП: Тариф платежного агента меняется при записи?'
+author:
+  display_name: Dima Protsenko
+  login: Dima Protsenko
+  email: ''
+  url: ''
+author_login: Dima Protsenko
+wordpress_id: 23
+date: '2017-03-01 15:47:00 +0500'
+date_gmt: '2017-03-01 12:47:00 +0500'
+---
+<div dir="ltr" style="text-align: left;"><b>Проблема: </b></p>
+<div style="text-align: justify;">Тариф платежного агента сохраняется некорректно, округляется, значения после записи другие.</div>
+<div style="text-align: justify;"><a name="more"></a></div>
+<div style="text-align: justify;"><b>Решение: </b></div>
+<div style="text-align: justify;">Открываем конфигуратор 1С Предприятия 8.3 для нашей базы ЗУП. Открываем конфигурацию для редактирования.</div>
+<div style="text-align: justify;">Открываем форму <u><b>ФормаЭлемента</b></u> в справочнике <u><b>ТарифыПлатежныхАгентов</b></u></div>
+<div style="text-align: justify;">Открываем модуль.</div>
+<div style="text-align: justify;">Смотрим две последние функции <u><b>СуммаПриПроцентеСПревышенияПоСумме</b></u> и <u><b>СуммаПоСуммеПриПроцентеСПревышения</b></u></div>
+<div style="text-align: justify;">В ней мы видим что функция возвращает результат исправленный в соответствии с предыдущим порогом, комметируем Возвраты функций.</div>
+<div style="text-align: justify;">Вместо комментированного пишем:</div>
+<div style="text-align: justify;"><i>Возврат ТекущаяСтрока.Сумма; </i>  - в первой функции.</div>
+<div style="text-align: justify;"><i>Возврат ТекущаяСтрока.СуммаПриПроцентеСПревышения;</i>  - во второй функции.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">Теперь при записи тарифов суммы они не будут меняться.</div>
+</div>

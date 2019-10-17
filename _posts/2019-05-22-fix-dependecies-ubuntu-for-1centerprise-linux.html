@@ -1,0 +1,65 @@
+---
+layout: post
+status: publish
+published: true
+title: Установка libpng-12 и зависимостей для  1С Предпритятие 8.3. на Ubuntu 19.04
+  Disco Dingo
+author:
+  display_name: admin
+  login: admin
+  email: protsenko@protonmail.com
+  url: ''
+author_login: admin
+author_email: protsenko@protonmail.com
+wordpress_id: 168
+wordpress_url: https://protsenko.dev/?p=168
+date: '2019-05-22 08:20:08 +0500'
+date_gmt: '2019-05-22 05:20:08 +0500'
+---
+<p><!-- wp:cover {"url":"https://protsenko.dev/wp-content/uploads/2019/05/ubuntu-19-04-disco-dingo.jpeg","id":174} --></p>
+<div class="wp-block-cover has-background-dim" style="background-image:url(https://protsenko.dev/wp-content/uploads/2019/05/ubuntu-19-04-disco-dingo.jpeg)">
+<div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Введите заголовок...","fontSize":"large"} --></p>
+<p style="text-align:center" class="has-large-font-size">Разрешаем все зависимости для установки 1С Предприятие 8.3</p>
+<p><!-- /wp:paragraph --></div>
+</div>
+<p><!-- /wp:cover --></p>
+<p><!-- wp:paragraph --></p>
+<p>Добрый день! Недавно столкнулся с проблемой при установке 1С Предприятие 8.3. на новой версии Ubuntu т.к. он упорно не хотел принимать deb пакет libpng-12 выдавая ошибку (на ранних версиях ubuntu, минте и т.д. этого не встречается)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Необходимо вручную установить данную библиотеку, а потом установить остальные зависимости</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:file {"id":178,"href":"https://protsenko.dev/wp-content/uploads/2019/05/libpng-1.2.59.tar"} --></p>
+<div class="wp-block-file"><a href="https://protsenko.dev/wp-content/uploads/2019/05/libpng-1.2.59.tar">Скачать</a><a href="https://protsenko.dev/wp-content/uploads/2019/05/libpng-1.2.59.tar" class="wp-block-file__button" download>libpng-12</a></div>
+<p><!-- /wp:file --></p>
+<p><!-- wp:file {"id":171,"href":"https://protsenko.dev/wp-content/uploads/2019/05/dependecies.tar"} --></p>
+<div class="wp-block-file"><a href="https://protsenko.dev/wp-content/uploads/2019/05/dependecies.tar">Скачать</a><a href="https://protsenko.dev/wp-content/uploads/2019/05/dependecies.tar" class="wp-block-file__button" download>остальные зависимости (libicu57, libjavascriptcoregtk,libjpeg, libwebkitgtk)</a></div>
+<p><!-- /wp:file --></p>
+<p><!-- wp:more --><br />
+<!--more--><br />
+<!-- /wp:more --></p>
+<p><!-- wp:paragraph --></p>
+<p>Краткая инструкция по установке libpng-12:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list {"ordered":true} --></p>
+<ol>
+<li> sudo apt install zlib1g-dev</li>
+<li> ./configure</li>
+<li>make check</li>
+<li>sudo make install</li>
+<li>sudo ln -s /usr/local/lib/libpng12.{a,so{,.0,0.59.0}} /usr/lib/x86_64-linux-gnu/. </li>
+</ol>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Инструкция по установке остальных зависимостей</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Распаковываем dependencies.tar</li>
+<li>Входим в папку</li>
+<li>sudo dpkg -i *</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>После этого можете ставить уже 1С Предприятие 8.3 все зависимости будут удовлетворены.</p>
+<p><!-- /wp:paragraph --></p>
