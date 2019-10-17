@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>1С Предприятие 8.3. Изменяем форму справочника, и переносим ее на внешнюю обработку с выводом доп. столбца | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="1С Предприятие 8.3. Изменяем форму справочника, и переносим ее на внешнюю обработку с выводом доп. столбца" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Добрый день, сегодня хочу описать пошагово как можно изменить форму списка справочника, и вывести на нее дополнительный столбец с выводом значения из регистра сведений. Задача с уровнем сложности легко, первым делом заходим в конфигуратор. За основу возьмем справочник &quot;Виды работ сотрудников&quot; Создаем в конфигураторе внешнюю обработку без реквизитов, и к ней форму. Реквизиты будем создавать на форме, создаем реквизит с наименованием &quot;Виды работ сотрудников&quot;, тип выбираем Динамический список. Должно получится вот-так: Далее в свойстве данного реквизита выбираем Основную таблицу, ею будет справочник который мы взяли за основу. И внимание, выбрав данную таблицу в реквизиты формы упали реквизиты справочника, но мы ведь не останавливаемся, и идем дальше, нам нужно получить еще данные из регистра сведений и вывести их на форму, для этого нажимаем на галочку выше: Произвольный запрос. Важно сначала выбрать основную таблицу, а потом произвольный запрос, так система поймет что взять за основу. Нажимаем на настройку списка, и переходим к конструктору запроса. Добавляем к выводу Реквизит Расценка из Регистра сведений РасценкиРаботСотрудников.СрезПоследних, в связях автоматически добавилась связь, к сожаление не совсем корректная, вместо левого соединения делаем правое. Сохраняем все, и переносим Динамический список на форму, оставляя только необходимые реквизиты Сохраняем обработку как внешнюю, и пробуем. Полученный результат ниже" />
+<meta property="og:description" content="Добрый день, сегодня хочу описать пошагово как можно изменить форму списка справочника, и вывести на нее дополнительный столбец с выводом значения из регистра сведений. Задача с уровнем сложности легко, первым делом заходим в конфигуратор. За основу возьмем справочник &quot;Виды работ сотрудников&quot; Создаем в конфигураторе внешнюю обработку без реквизитов, и к ней форму. Реквизиты будем создавать на форме, создаем реквизит с наименованием &quot;Виды работ сотрудников&quot;, тип выбираем Динамический список. Должно получится вот-так: Далее в свойстве данного реквизита выбираем Основную таблицу, ею будет справочник который мы взяли за основу. И внимание, выбрав данную таблицу в реквизиты формы упали реквизиты справочника, но мы ведь не останавливаемся, и идем дальше, нам нужно получить еще данные из регистра сведений и вывести их на форму, для этого нажимаем на галочку выше: Произвольный запрос. Важно сначала выбрать основную таблицу, а потом произвольный запрос, так система поймет что взять за основу. Нажимаем на настройку списка, и переходим к конструктору запроса. Добавляем к выводу Реквизит Расценка из Регистра сведений РасценкиРаботСотрудников.СрезПоследних, в связях автоматически добавилась связь, к сожаление не совсем корректная, вместо левого соединения делаем правое. Сохраняем все, и переносим Динамический список на форму, оставляя только необходимые реквизиты Сохраняем обработку как внешнюю, и пробуем. Полученный результат ниже" />
+<link rel="canonical" href="http://localhost:4000/2017/10/16/1-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-bf-d1-80-d0-b8-d1-8f-d1-82-d0-b8-d0-b5-8-3-d0-b8-d0-b7-d0-bc-d0-b5-d0-bd-d1-8f-d0-b5-d0-bc-d1-84-d0-be-d1-80-d0-bc-d1-83-d1-81-d0-bf-d1-80-d0-b0-d0-b2-d0-be.html" />
+<meta property="og:url" content="http://localhost:4000/2017/10/16/1-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-bf-d1-80-d0-b8-d1-8f-d1-82-d0-b8-d0-b5-8-3-d0-b8-d0-b7-d0-bc-d0-b5-d0-bd-d1-8f-d0-b5-d0-bc-d1-84-d0-be-d1-80-d0-bc-d1-83-d1-81-d0-bf-d1-80-d0-b0-d0-b2-d0-be.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-16T10:16:00+05:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2017/10/16/1-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-bf-d1-80-d0-b8-d1-8f-d1-82-d0-b8-d0-b5-8-3-d0-b8-d0-b7-d0-bc-d0-b5-d0-bd-d1-8f-d0-b5-d0-bc-d1-84-d0-be-d1-80-d0-bc-d1-83-d1-81-d0-bf-d1-80-d0-b0-d0-b2-d0-be.html"},"@type":"BlogPosting","url":"http://localhost:4000/2017/10/16/1-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-bf-d1-80-d0-b8-d1-8f-d1-82-d0-b8-d0-b5-8-3-d0-b8-d0-b7-d0-bc-d0-b5-d0-bd-d1-8f-d0-b5-d0-bc-d1-84-d0-be-d1-80-d0-bc-d1-83-d1-81-d0-bf-d1-80-d0-b0-d0-b2-d0-be.html","headline":"1С Предприятие 8.3. Изменяем форму справочника, и переносим ее на внешнюю обработку с выводом доп. столбца","dateModified":"2017-10-16T10:16:00+05:00","datePublished":"2017-10-16T10:16:00+05:00","description":"Добрый день, сегодня хочу описать пошагово как можно изменить форму списка справочника, и вывести на нее дополнительный столбец с выводом значения из регистра сведений. Задача с уровнем сложности легко, первым делом заходим в конфигуратор. За основу возьмем справочник &quot;Виды работ сотрудников&quot; Создаем в конфигураторе внешнюю обработку без реквизитов, и к ней форму. Реквизиты будем создавать на форме, создаем реквизит с наименованием &quot;Виды работ сотрудников&quot;, тип выбираем Динамический список. Должно получится вот-так: Далее в свойстве данного реквизита выбираем Основную таблицу, ею будет справочник который мы взяли за основу. И внимание, выбрав данную таблицу в реквизиты формы упали реквизиты справочника, но мы ведь не останавливаемся, и идем дальше, нам нужно получить еще данные из регистра сведений и вывести их на форму, для этого нажимаем на галочку выше: Произвольный запрос. Важно сначала выбрать основную таблицу, а потом произвольный запрос, так система поймет что взять за основу. Нажимаем на настройку списка, и переходим к конструктору запроса. Добавляем к выводу Реквизит Расценка из Регистра сведений РасценкиРаботСотрудников.СрезПоследних, в связях автоматически добавилась связь, к сожаление не совсем корректная, вместо левого соединения делаем правое. Сохраняем все, и переносим Динамический список на форму, оставляя только необходимые реквизиты Сохраняем обработку как внешнюю, и пробуем. Полученный результат ниже","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">О авторе</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">1С Предприятие 8.3. Изменяем форму справочника, и переносим ее на внешнюю обработку с выводом доп. столбца</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-10-16T10:16:00+05:00" itemprop="datePublished">Oct 16, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{"display_name"=>"Dima Protsenko", "login"=>"Dima Protsenko", "email"=>"", "url"=>""}</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div dir="ltr" style="text-align: left;">
+<p>Добрый день, сегодня хочу описать пошагово как можно изменить форму списка справочника, и вывести на нее дополнительный столбец с выводом значения из регистра сведений.<br />
+Задача с уровнем сложности <u>легко, </u>первым делом заходим в конфигуратор.<br />
+За основу возьмем справочник "Виды работ сотрудников"</p>
+<p><a name="more"></a><br />
+Создаем в конфигураторе внешнюю обработку без реквизитов, и к ней форму.<br />
+Реквизиты будем создавать на форме, создаем реквизит с наименованием "Виды работ сотрудников", тип выбираем Динамический список.<br />
+Должно получится вот-так:</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_2.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_2-300x60.png" width="640" height="126" border="0" data-original-height="160" data-original-width="801" /></a></div>
+<p>Далее в свойстве данного реквизита выбираем Основную таблицу, ею будет справочник который мы взяли за основу.<br />
+И внимание, выбрав данную таблицу в реквизиты формы упали реквизиты справочника, но мы ведь не останавливаемся, и идем дальше, нам нужно получить еще данные из регистра сведений и вывести их на форму, для этого нажимаем на галочку выше: Произвольный запрос.<br />
+Важно сначала выбрать основную таблицу, а потом произвольный запрос, так система поймет что взять за основу.<br />
+Нажимаем на настройку списка, и переходим к конструктору запроса.</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_4.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_4-300x206.png" width="400" height="273" border="0" data-original-height="585" data-original-width="854" /></a></div>
+<p>Добавляем к выводу Реквизит Расценка из Регистра сведений РасценкиРаботСотрудников.СрезПоследних, в связях автоматически добавилась связь, к сожаление не совсем корректная, вместо левого соединения делаем правое.</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_5.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_5-300x54.png" width="400" height="71" border="0" data-original-height="163" data-original-width="910" /></a></div>
+<p>Сохраняем все, и переносим Динамический список на форму, оставляя только необходимые реквизиты</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_6.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_6-300x177.png" width="400" height="235" border="0" data-original-height="392" data-original-width="666" /></a></div>
+<p>Сохраняем обработку как внешнюю, и пробуем.<br />
+Полученный результат ниже</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_7.png"><img src="https://protsenko.dev/wp-content/uploads/2017/10/Screenshot_7-300x256.png" width="400" height="341" border="0" data-original-height="573" data-original-width="671" /></a></div>
+</div>
+
+  </div><a class="u-url" href="/2017/10/16/1-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-bf-d1-80-d0-b8-d1-8f-d1-82-d0-b8-d0-b5-8-3-d0-b8-d0-b7-d0-bc-d0-b5-d0-bd-d1-8f-d0-b5-d0-bc-d1-84-d0-be-d1-80-d0-bc-d1-83-d1-81-d0-bf-d1-80-d0-b0-d0-b2-d0-be.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
